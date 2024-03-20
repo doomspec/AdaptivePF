@@ -1,0 +1,12 @@
+Qulacs~=0.2.0
+openfermion~=1.0.0
+numpy~=1.20.0
+scipy~=1.4.1
+projectq~=0.5.1
+networkx~=2.5
+matplotlib~=3.3.3
+pyscf~=1.7.5.1
+openfermionpyscf~=0.5
+tqdm~=4.56.0
+numba~=0.59.1
+multiprocess~=0.70.11.1
