@@ -84,10 +84,10 @@ def count_operator_nontrivial_terms(operator: QubitOperator):
     return n_term
 
 
-PauliI = np.array([[1, 0], [0, 1]], np.complex)
-PauliX = np.array([[0, 1], [1, 0]], np.complex)
-PauliY = np.array([[0, -1j], [1j, 0]], np.complex)
-PauliZ = np.array([[1, 0], [0, -1]], np.complex)
+PauliI = np.array([[1, 0], [0, 1]], complex)
+PauliX = np.array([[0, 1], [1, 0]], complex)
+PauliY = np.array([[0, -1j], [1j, 0]], complex)
+PauliZ = np.array([[1, 0], [0, -1]], complex)
 pauli_dict = {"I": PauliI, "X": PauliX, "Y": PauliY, "Z": PauliZ}
 
 

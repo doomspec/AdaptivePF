@@ -17,6 +17,8 @@ pip install -r requirements.txt
 
 The scripts for running the numerical experiments are in the `adaptive_PF` folder.
 
+You can adjust `n_worker` to the number of CPU cores you want to use.
+
 ## Results
 
 ![Results](./numerics.png)

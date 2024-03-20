@@ -1,3 +1,4 @@
+from config import adaptive_pf_output
 from mizore.method.evolution._te_drawer import *
 from mizore.draw._standard_plt import get_standard_plt, init_subplots
 from mizore.draw import format_exponent
@@ -63,7 +64,7 @@ def draw_krylov_compare(ax, json_path, benchmark2draw=tuple()):
     ax2.set_ylim(min(n_gate_data) * 0.95,max(n_gate_data)*1.2)
     ax.legend(lns,labels,ncol=3,loc="upper left")
 
-root_path = "/home/mh-group/mizore_results/adaptive_evolution/h4"
+root_path = adaptive_pf_output+"/h4"
 paths = get_subdirectory_paths(root_path)
 
 def draw_krylov(axs):

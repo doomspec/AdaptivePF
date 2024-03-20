@@ -1,3 +1,4 @@
+from config import adaptive_pf_output
 from mizore.method.evolution._te_drawer import *
 from mizore.draw._standard_plt import get_standard_plt, init_subplots
 
@@ -10,4 +11,4 @@ def draw_single(project_path):
     plt.savefig(project_path + '/run_status.png', bbox_inches='tight')
 
 if __name__ == '__main__':
-    draw_single("/home/mh-group/mizore_results/adaptive_evolution/H2O_0.2_01-07-06h09m38s")
+    draw_single(adaptive_pf_output+"/H2O_0.2_01-07-06h09m38s")

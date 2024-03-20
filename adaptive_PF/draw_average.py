@@ -1,4 +1,6 @@
 import json, os
+
+from config import adaptive_pf_output
 from mizore.utilities.path_tools import get_subdirectory_paths
 from mizore.method.evolution._te_drawer import get_fidelity_x_y_data
 def folder_name2title(folder_name):
@@ -122,7 +124,7 @@ def draw_gate_compare_same_color(ax, paths, gate_name="CNOT"):
     ax.set_xlabel("Time")
     ax.set_ylabel(gate_name + " gate count")
 
-folder_path="/home/mh-group/mizore_results/adaptive_evolution/random_ising"
+folder_path=adaptive_pf_output+"/random_ising"
 
 def draw_average(axs):
     paths = get_subdirectory_paths(folder_path)
@@ -142,5 +144,5 @@ if __name__ == '__main__0':
 if __name__ == '__main__':
     plt = get_standard_plt()
     fig, axs = init_subplots(plt, ncols=2, nrows=1)
-    draw_averge(axs)
+    draw_average(axs)
     plt.savefig(folder_path + '/compare.png', bbox_inches='tight')

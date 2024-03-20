@@ -1,6 +1,3 @@
-from sys import path
-path.append("/home/mh-group/zijian/Remote/Mizore/")
-
 from mizore.method.evolution import run_adaptive_product_formula
 from mizore.hamiltonian.random_coeff import get_random_coeff_operator, normalize_operator_coeff
 from mizore.hamiltonian.lattice.ising import full_connected_transverse_field_ising

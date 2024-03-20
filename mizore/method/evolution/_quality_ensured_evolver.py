@@ -6,7 +6,6 @@ from ._parameter_evolver import TimeEvolutionEvolver
 from ._adaptive_circuit_constructor import TimeEvolutionConstructor
 import numpy as np
 from mizore.block import BlockCircuit
-from mizore.block_pool import BlockPool
 
 
 class QualityEnsuredEvolver():

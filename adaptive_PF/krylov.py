@@ -1,3 +1,4 @@
+from config import adaptive_pf_output
 from mizore.method.subspace._eigensolver import SubspaceEigensolver
 from mizore.method.evolution._te_benchmarker import *
 from mizore.classical.numpy_core import get_kth_excited_state
@@ -56,7 +57,7 @@ def get_n_gate_by_path(save_path):
 from benchmark import benchmark
 from draw_single import draw_single
 
-root_path = "/home/mh-group/mizore_results/adaptive_evolution/h4"
+root_path = adaptive_pf_output+"/h4"
 paths = get_subdirectory_paths(root_path)
 
 if __name__ == '__main__0':

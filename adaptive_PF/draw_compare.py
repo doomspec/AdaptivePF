@@ -1,3 +1,4 @@
+from config import adaptive_pf_output
 from mizore.method.evolution._te_drawer import *
 from mizore.draw._standard_plt import get_standard_plt, init_subplots
 from mizore.utilities.path_tools import get_subdirectory_paths
@@ -99,8 +100,8 @@ def order_path_by_dcut(paths):
     paths=[paths[i] for i in rank]
     return  paths
 
-#root_path = "/home/mh-group/mizore_results/adaptive_evolution/h4"
-root_path = "/home/mh-group/mizore_results/adaptive_evolution/h2o"
+
+root_path = adaptive_pf_output+"/h2o"
 n_delta_t=2
 paths = get_subdirectory_paths(root_path)
 paths = order_path_by_dcut(paths)

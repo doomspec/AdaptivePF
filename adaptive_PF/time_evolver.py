@@ -1,3 +1,4 @@
+from config import output_root
 from mizore.method.evolution import *
 from mizore.block import BlockCircuit, GlobalPhaseBlock
 from mizore.block_pool._rotation_pools import hamiltonian_rotations_pool
@@ -17,7 +18,7 @@ def evolve(quality_cutoff=0.3, n_circuit=30, delta_t=0.2):
     pool = BlockPool(hamiltonian_rotations_pool(hamil))
     print(bc)
     bc.set_all_block_active()
-    save_root = "/home/mh-group/"
+    save_root = output_root
     with TaskManager(40) as tm:
         evolver = TimeEvolutionEvolver(bc.n_qubit, hamil, quality_cutoff=quality_cutoff, stepsize=2e-3)
         constructor = TimeEvolutionConstructor(n_qubit, pool, hamil, quality_cutoff / 2, tm)

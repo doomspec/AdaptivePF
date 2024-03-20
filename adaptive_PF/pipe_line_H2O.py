@@ -14,7 +14,7 @@ if __name__ == '__main__':
     print("Trotter CNOT:", get_first_trotter_gate_count(obj.hamiltonian))
     #exit(0)
     for quality_cutoff in [0.2]:
-        save_path = run_adaptive_product_formula(obj, quality_cutoff=quality_cutoff, n_circuit=10, delta_t=0.2, nM_cutoff=1e11)
+        save_path = run_adaptive_product_formula(obj, quality_cutoff=quality_cutoff, n_circuit=10, delta_t=0.2, nM_cutoff=1e11, n_worker=1)
         #exit(0)
         benchmark(save_path)
         draw_single(save_path)
